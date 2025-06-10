@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carla, tenho algo pra te perguntar... 💖</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      text-align: center;
+      padding-top: 80px;
+    }
+    h1 {
+      color: #ff00ea;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #sim {
+      background-color: #28a745;
+      color: white;
+    }
+    #nao {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+    p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Carla 💘</h1>
+  <p>Escolha a opção certa...</p>
+  <h1>Você quer namorar comigo?</h1>
+  <button id="sim" onclick="respostaSim()">Sim 💕</button>
+  <button id="nao" onmouseover="desvia(this)">Não 🤨​</button>
+
+  <script>
+    function respostaSim() {
+      alert("AEEE! Agora podemos colocar a aliança na bio? 💑💖\nWellington e Carla para sempre!");
+    }
+
+    function desvia(btn) {
+      const largura = window.innerWidth - btn.offsetWidth;
+      const altura = window.innerHeight - btn.offsetHeight;
+      const novaEsq = Math.random() * largura;
+      const novaTop = Math.random() * altura;
+      btn.style.left = novaEsq + "px";
+      btn.style.top = novaTop + "px";
+    }
+  </script>
+
+</body>
+</html>
